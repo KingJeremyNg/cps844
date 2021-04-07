@@ -1,0 +1,39 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.CorrelationAttributeEval 
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     LeagueofLegends
+Instances:    15240
+Attributes:   9
+              gamelength
+              gold
+              kills
+              inhibitors
+              towers
+              dragons
+              barons
+              heralds
+              class
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 9 class):
+	Correlation Ranking Filter
+Ranked attributes:
+ 0.881   5 towers
+ 0.708   4 inhibitors
+ 0.64    3 kills
+ 0.595   7 barons
+ 0.551   6 dragons
+ 0.329   2 gold
+ 0.161   8 heralds
+ 0       1 gamelength
+
+Selected attributes: 5,4,3,7,6,2,8,1 : 8
+
