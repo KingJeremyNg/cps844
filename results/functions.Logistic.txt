@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     LeagueofLegends
+Instances:    15240
+Attributes:   9
+              gamelength
+              gold
+              kills
+              inhibitors
+              towers
+              dragons
+              barons
+              heralds
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                Class
+Variable          yes
+=====================
+gamelength    -0.2721
+gold           0.0001
+kills          0.0983
+inhibitors      1.663
+towers        -0.3897
+dragons        0.3251
+barons         0.0845
+heralds       -0.4421
+Intercept     -6.2873
+
+
+Odds Ratios...
+                Class
+Variable          yes
+=====================
+gamelength     0.7618
+gold           1.0001
+kills          1.1033
+inhibitors     5.2751
+towers         0.6772
+dragons        1.3841
+barons         1.0882
+heralds        0.6427
+
+
+Time taken to build model: 0.31 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14722               96.601  %
+Incorrectly Classified Instances       518                3.399  %
+Kappa statistic                          0.932 
+Mean absolute error                      0.0505
+Root mean squared error                  0.1597
+Relative absolute error                 10.0942 %
+Root relative squared error             31.9393 %
+Total Number of Instances            15240     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.971    0.039    0.961      0.971    0.966      0.932    0.995     0.995     yes
+                 0.961    0.029    0.971      0.961    0.966      0.932    0.995     0.995     no
+Weighted Avg.    0.966    0.034    0.966      0.966    0.966      0.932    0.995     0.995     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7401  219 |    a = yes
+  299 7321 |    b = no
+

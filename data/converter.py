@@ -36,8 +36,11 @@ with open('LeagueofLegends.csv', 'r') as read_obj:
         b_dragons = row[14].count("]") - 1
         b_barons = row[15].count("]") - 1
         b_heralds = row[16].count("]") - 1
-        file.write("{},{},{},{},{},{},{},{},{}\n".format(gamelength, b_gold,
-                                                       b_kills, b_towers, b_inhibs, b_dragons, b_barons, b_heralds, b_result))
+        file.write("{},{},{},{},{},{},{},{},{}\n"
+                   .format(
+                       gamelength, b_gold, b_kills, b_towers, b_inhibs,
+                       b_dragons, b_barons, b_heralds, b_result
+                   ))
 
         r_gold = row[17].strip("][").split(", ")[-1]
         r_kills = row[18].count("]") // 2
@@ -46,5 +49,10 @@ with open('LeagueofLegends.csv', 'r') as read_obj:
         r_dragons = row[21].count("]") - 1
         r_barons = row[22].count("]") - 1
         r_heralds = row[23].count("]") - 1
-        file.write("{},{},{},{},{},{},{},{},{}\n".format(gamelength, r_gold,
-                                                       r_kills, r_towers, r_inhibs, r_dragons, r_barons, r_heralds, r_result))
+        file.write("{},{},{},{},{},{},{},{},{}\n"
+                   .format(
+                       gamelength, r_gold, r_kills, r_towers, r_inhibs,
+                       r_dragons, r_barons, r_heralds, r_result
+                   ))
+
+file.close()

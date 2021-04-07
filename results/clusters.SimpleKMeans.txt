@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     LeagueofLegends
+Instances:    15240
+Attributes:   9
+              gamelength
+              gold
+              kills
+              inhibitors
+              towers
+              dragons
+              barons
+              heralds
+              class
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 2
+Within cluster sum of squared errors: 1562.0394252778349
+
+Initial starting points (random):
+
+Cluster 0: 34,49822,5,1,0,0,0,0,no
+Cluster 1: 34,58051,20,9,1,1,1,0,yes
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                          Cluster#
+Attribute     Full Data          0          1
+              (15240.0)   (7619.0)   (7621.0)
+=============================================
+gamelength      37.0126     37.005    37.0202
+gold          62435.178 57350.0827 67518.9389
+kills           12.5299     8.0903    16.9684
+inhibitors       6.3424     3.0616     9.6224
+towers           1.1235     0.1719     2.0748
+dragons          1.8888     1.1143      2.663
+barons            0.728     0.2592     1.1967
+heralds          0.2866     0.2041     0.3691
+class               yes         no        yes
+
+
+
+
+Time taken to build model (full training data) : 0.17 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       7619 ( 50%)
+1       7621 ( 50%)
+

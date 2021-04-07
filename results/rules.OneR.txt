@@ -1,0 +1,52 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     LeagueofLegends
+Instances:    15240
+Attributes:   9
+              gamelength
+              gold
+              kills
+              inhibitors
+              towers
+              dragons
+              barons
+              heralds
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+inhibitors:
+	< 6.5	-> no
+	>= 6.5	-> yes
+(14571/15240 instances correct)
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14571               95.6102 %
+Incorrectly Classified Instances       669                4.3898 %
+Kappa statistic                          0.9122
+Mean absolute error                      0.0439
+Root mean squared error                  0.2095
+Relative absolute error                  8.7795 %
+Root relative squared error             41.9035 %
+Total Number of Instances            15240     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.991    0.079    0.926      0.991    0.958      0.914    0.956     0.923     yes
+                 0.921    0.009    0.990      0.921    0.955      0.914    0.956     0.952     no
+Weighted Avg.    0.956    0.044    0.958      0.956    0.956      0.914    0.956     0.937     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7550   70 |    a = yes
+  599 7021 |    b = no
+

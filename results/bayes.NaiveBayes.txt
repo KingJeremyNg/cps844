@@ -1,0 +1,102 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     LeagueofLegends
+Instances:    15240
+Attributes:   9
+              gamelength
+              gold
+              kills
+              inhibitors
+              towers
+              dragons
+              barons
+              heralds
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                    Class
+Attribute             yes         no
+                    (0.5)      (0.5)
+=====================================
+gamelength
+  mean             36.9726    36.9726
+  std. dev.         7.9944     7.9944
+  weight sum          7620       7620
+  precision         1.2787     1.2787
+
+gold
+  mean          67504.9944 57365.4022
+  std. dev.     13361.7253 15649.8715
+  weight sum          7620       7620
+  precision        11.6985    11.6985
+
+kills
+  mean             16.9205     8.1255
+  std. dev.         5.5011     5.1762
+  weight sum          7620       7620
+  precision         1.5435     1.5435
+
+inhibitors
+  mean              9.6222     3.0626
+  std. dev.          1.252     2.1474
+  weight sum          7620       7620
+  precision              1          1
+
+towers
+  mean              2.2995     0.1923
+  std. dev.         1.1257     0.7048
+  weight sum          7620       7620
+  precision         1.1667     1.1667
+
+dragons
+  mean              2.6625     1.1151
+  std. dev.         1.1856     1.1552
+  weight sum          7620       7620
+  precision              1          1
+
+barons
+  mean              1.1961       0.26
+  std. dev.         0.6823     0.5762
+  weight sum          7620       7620
+  precision              1          1
+
+heralds
+  mean              0.3692     0.2041
+  std. dev.         0.5615     0.4433
+  weight sum          7620       7620
+  precision              1          1
+
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14454               94.8425 %
+Incorrectly Classified Instances       786                5.1575 %
+Kappa statistic                          0.8969
+Mean absolute error                      0.0554
+Root mean squared error                  0.2113
+Relative absolute error                 11.0814 %
+Root relative squared error             42.266  %
+Total Number of Instances            15240     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.973    0.076    0.928      0.973    0.950      0.898    0.973     0.946     yes
+                 0.924    0.027    0.971      0.924    0.947      0.898    0.973     0.982     no
+Weighted Avg.    0.948    0.052    0.949      0.948    0.948      0.898    0.973     0.964     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7412  208 |    a = yes
+  578 7042 |    b = no
+

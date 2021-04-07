@@ -1,0 +1,125 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     LeagueofLegends
+Instances:    15240
+Attributes:   9
+              gamelength
+              gold
+              kills
+              inhibitors
+              towers
+              dragons
+              barons
+              heralds
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    1.0509852668318422
+    Node 2    -2.9134860775528564
+    Node 3    -7.626547507454336
+    Node 4    8.98073483147099
+    Node 5    -3.004324194657369
+    Node 6    3.8815570203118743
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -1.050985266831857
+    Node 2    2.9134860775528693
+    Node 3    7.626547507452916
+    Node 4    -8.980734831468956
+    Node 5    3.004324194657449
+    Node 6    -3.8815570203119214
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    13.087481655582694
+    Attrib gamelength    6.208283669917375
+    Attrib gold    -0.8213559242761104
+    Attrib kills    -4.6867248173671845
+    Attrib inhibitors    -21.722948755172844
+    Attrib towers    19.814906297624557
+    Attrib dragons    -0.8576268411067638
+    Attrib barons    1.5499085121577625
+    Attrib heralds    -0.28872808876853634
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -41.416259672164976
+    Attrib gamelength    4.97086849181362
+    Attrib gold    -5.813843495529343
+    Attrib kills    4.005862920939373
+    Attrib inhibitors    -9.84994677209862
+    Attrib towers    -45.32233481525563
+    Attrib dragons    0.46203854431176816
+    Attrib barons    -1.8070075265041943
+    Attrib heralds    1.2117697981999658
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -5.185956936053163
+    Attrib gamelength    -17.513674484246604
+    Attrib gold    -2.119359469891315
+    Attrib kills    8.932186895887536
+    Attrib inhibitors    6.735893997226293
+    Attrib towers    -4.117250734767194
+    Attrib dragons    3.896947250126995
+    Attrib barons    2.930639371728071
+    Attrib heralds    -0.9695152194578605
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -5.743198884437995
+    Attrib gamelength    4.430869399658065
+    Attrib gold    2.5793252543277023
+    Attrib kills    -5.460930009842652
+    Attrib inhibitors    -1.5923411761071173
+    Attrib towers    -3.7173054831078134
+    Attrib dragons    3.128005755376828
+    Attrib barons    5.001124279556352
+    Attrib heralds    2.86741132875801
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    1.0194177067944439
+    Attrib gamelength    -6.464337777085322
+    Attrib gold    5.596560276398534
+    Attrib kills    9.953177392276361
+    Attrib inhibitors    30.406136572070167
+    Attrib towers    -3.4855568056651274
+    Attrib dragons    2.426939364720525
+    Attrib barons    5.304708129168798
+    Attrib heralds    2.4779062359949253
+Class yes
+    Input
+    Node 0
+Class no
+    Input
+    Node 1
+
+
+Time taken to build model: 8.49 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14783               97.0013 %
+Incorrectly Classified Instances       457                2.9987 %
+Kappa statistic                          0.94  
+Mean absolute error                      0.0406
+Root mean squared error                  0.1496
+Relative absolute error                  8.1296 %
+Root relative squared error             29.924  %
+Total Number of Instances            15240     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.975    0.035    0.965      0.975    0.970      0.940    0.996     0.995     yes
+                 0.965    0.025    0.975      0.965    0.970      0.940    0.996     0.996     no
+Weighted Avg.    0.970    0.030    0.970      0.970    0.970      0.940    0.996     0.996     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7429  191 |    a = yes
+  266 7354 |    b = no
+
