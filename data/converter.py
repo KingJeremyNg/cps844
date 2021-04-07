@@ -38,7 +38,7 @@ with open('LeagueofLegends.csv', 'r') as read_obj:
         b_heralds = row[16].count("]") - 1
         file.write("{},{},{},{},{},{},{},{},{}\n"
                    .format(
-                       gamelength, b_gold, b_kills, b_towers, b_inhibs,
+                       gamelength, b_gold, b_kills, b_inhibs, b_towers,
                        b_dragons, b_barons, b_heralds, b_result
                    ))
 
@@ -51,7 +51,7 @@ with open('LeagueofLegends.csv', 'r') as read_obj:
         r_heralds = row[23].count("]") - 1
         file.write("{},{},{},{},{},{},{},{},{}\n"
                    .format(
-                       gamelength, r_gold, r_kills, r_towers, r_inhibs,
+                       gamelength, r_gold, r_kills, r_inhibs, r_towers,
                        r_dragons, r_barons, r_heralds, r_result
                    ))
 

@@ -19,75 +19,75 @@ Test mode:    10-fold cross-validation
 
 Sigmoid Node 0
     Inputs    Weights
-    Threshold    1.0509852668318422
-    Node 2    -2.9134860775528564
-    Node 3    -7.626547507454336
-    Node 4    8.98073483147099
-    Node 5    -3.004324194657369
-    Node 6    3.8815570203118743
+    Threshold    1.0539628815249742
+    Node 2    3.9380398424415635
+    Node 3    -7.586490269803627
+    Node 4    8.937673613320912
+    Node 5    -3.074006635486034
+    Node 6    -2.9317960153866904
 Sigmoid Node 1
     Inputs    Weights
-    Threshold    -1.050985266831857
-    Node 2    2.9134860775528693
-    Node 3    7.626547507452916
-    Node 4    -8.980734831468956
-    Node 5    3.004324194657449
-    Node 6    -3.8815570203119214
+    Threshold    -1.0539628815249735
+    Node 2    -3.938039842441568
+    Node 3    7.586490269803489
+    Node 4    -8.937673613320726
+    Node 5    3.074006635486043
+    Node 6    2.9317960153866904
 Sigmoid Node 2
     Inputs    Weights
-    Threshold    13.087481655582694
-    Attrib gamelength    6.208283669917375
-    Attrib gold    -0.8213559242761104
-    Attrib kills    -4.6867248173671845
-    Attrib inhibitors    -21.722948755172844
-    Attrib towers    19.814906297624557
-    Attrib dragons    -0.8576268411067638
-    Attrib barons    1.5499085121577625
-    Attrib heralds    -0.28872808876853634
+    Threshold    1.1215411877071362
+    Attrib gamelength    -6.52157849579446
+    Attrib gold    5.572402473559392
+    Attrib kills    10.140008419125722
+    Attrib inhibitors    -3.5276093753801536
+    Attrib towers    30.53358595289717
+    Attrib dragons    2.3763726368364755
+    Attrib barons    5.434449138774088
+    Attrib heralds    2.5294376258753495
 Sigmoid Node 3
     Inputs    Weights
-    Threshold    -41.416259672164976
-    Attrib gamelength    4.97086849181362
-    Attrib gold    -5.813843495529343
-    Attrib kills    4.005862920939373
-    Attrib inhibitors    -9.84994677209862
-    Attrib towers    -45.32233481525563
-    Attrib dragons    0.46203854431176816
-    Attrib barons    -1.8070075265041943
-    Attrib heralds    1.2117697981999658
+    Threshold    -41.528560276906894
+    Attrib gamelength    5.019044704678496
+    Attrib gold    -5.795900298738367
+    Attrib kills    4.010197262493945
+    Attrib inhibitors    -45.45893980681777
+    Attrib towers    -9.850505586163509
+    Attrib dragons    0.46871068591929294
+    Attrib barons    -1.821309330456195
+    Attrib heralds    1.2074873711872163
 Sigmoid Node 4
     Inputs    Weights
-    Threshold    -5.185956936053163
-    Attrib gamelength    -17.513674484246604
-    Attrib gold    -2.119359469891315
-    Attrib kills    8.932186895887536
-    Attrib inhibitors    6.735893997226293
-    Attrib towers    -4.117250734767194
-    Attrib dragons    3.896947250126995
-    Attrib barons    2.930639371728071
-    Attrib heralds    -0.9695152194578605
+    Threshold    -5.142729616194872
+    Attrib gamelength    -17.726317519469777
+    Attrib gold    -2.0325177853816516
+    Attrib kills    8.968712567494082
+    Attrib inhibitors    -4.078110677492746
+    Attrib towers    6.808958605040543
+    Attrib dragons    3.947126054229549
+    Attrib barons    2.9534198130501745
+    Attrib heralds    -0.9804422772929006
 Sigmoid Node 5
     Inputs    Weights
-    Threshold    -5.743198884437995
-    Attrib gamelength    4.430869399658065
-    Attrib gold    2.5793252543277023
-    Attrib kills    -5.460930009842652
-    Attrib inhibitors    -1.5923411761071173
-    Attrib towers    -3.7173054831078134
-    Attrib dragons    3.128005755376828
-    Attrib barons    5.001124279556352
-    Attrib heralds    2.86741132875801
+    Threshold    -5.263629008197324
+    Attrib gamelength    4.240862856661833
+    Attrib gold    2.1342747483127207
+    Attrib kills    -4.286671164585899
+    Attrib inhibitors    -4.3934759136951484
+    Attrib towers    -0.8387202168014278
+    Attrib dragons    2.7566002156397014
+    Attrib barons    5.8058672206064275
+    Attrib heralds    3.250343823921951
 Sigmoid Node 6
     Inputs    Weights
-    Threshold    1.0194177067944439
-    Attrib gamelength    -6.464337777085322
-    Attrib gold    5.596560276398534
-    Attrib kills    9.953177392276361
-    Attrib inhibitors    30.406136572070167
-    Attrib towers    -3.4855568056651274
-    Attrib dragons    2.426939364720525
-    Attrib barons    5.304708129168798
-    Attrib heralds    2.4779062359949253
+    Threshold    13.044922892915693
+    Attrib gamelength    6.170667130382027
+    Attrib gold    -0.7871885767642794
+    Attrib kills    -4.69583906912913
+    Attrib inhibitors    19.82627254412956
+    Attrib towers    -21.757599588823723
+    Attrib dragons    -0.8651847593211819
+    Attrib barons    1.5099485550144198
+    Attrib heralds    -0.27879922967777987
 Class yes
     Input
     Node 0
@@ -96,30 +96,30 @@ Class no
     Node 1
 
 
-Time taken to build model: 8.49 seconds
+Time taken to build model: 10.66 seconds
 
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances       14783               97.0013 %
-Incorrectly Classified Instances       457                2.9987 %
-Kappa statistic                          0.94  
-Mean absolute error                      0.0406
-Root mean squared error                  0.1496
-Relative absolute error                  8.1296 %
-Root relative squared error             29.924  %
+Correctly Classified Instances       14785               97.0144 %
+Incorrectly Classified Instances       455                2.9856 %
+Kappa statistic                          0.9403
+Mean absolute error                      0.0403
+Root mean squared error                  0.1505
+Relative absolute error                  8.0549 %
+Root relative squared error             30.0917 %
 Total Number of Instances            15240     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.975    0.035    0.965      0.975    0.970      0.940    0.996     0.995     yes
-                 0.965    0.025    0.975      0.965    0.970      0.940    0.996     0.996     no
+                 0.976    0.035    0.965      0.976    0.970      0.940    0.996     0.995     yes
+                 0.965    0.024    0.975      0.965    0.970      0.940    0.996     0.996     no
 Weighted Avg.    0.970    0.030    0.970      0.970    0.970      0.940    0.996     0.996     
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 7429  191 |    a = yes
-  266 7354 |    b = no
+ 7435  185 |    a = yes
+  270 7350 |    b = no
 

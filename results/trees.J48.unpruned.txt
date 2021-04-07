@@ -1,0 +1,585 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -U -M 2
+Relation:     LeagueofLegends
+Instances:    15240
+Attributes:   9
+              gamelength
+              gold
+              kills
+              inhibitors
+              towers
+              dragons
+              barons
+              heralds
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 unpruned tree
+------------------
+
+towers <= 6
+|   inhibitors <= 0
+|   |   gamelength <= 24
+|   |   |   gold <= 38741: no (177.0)
+|   |   |   gold > 38741
+|   |   |   |   towers <= 4
+|   |   |   |   |   gamelength <= 23: yes (2.0)
+|   |   |   |   |   gamelength > 23: no (2.0)
+|   |   |   |   towers > 4: yes (6.0)
+|   |   gamelength > 24
+|   |   |   kills <= 14: no (6055.0/2.0)
+|   |   |   kills > 14
+|   |   |   |   gamelength <= 33
+|   |   |   |   |   barons <= 0
+|   |   |   |   |   |   gamelength <= 27
+|   |   |   |   |   |   |   gold <= 43043: no (2.0)
+|   |   |   |   |   |   |   gold > 43043: yes (3.0)
+|   |   |   |   |   |   gamelength > 27: no (54.0)
+|   |   |   |   |   barons > 0
+|   |   |   |   |   |   towers <= 4: no (2.0)
+|   |   |   |   |   |   towers > 4: yes (6.0)
+|   |   |   |   gamelength > 33: no (466.0/1.0)
+|   inhibitors > 0
+|   |   heralds <= 0
+|   |   |   gamelength <= 36
+|   |   |   |   kills <= 19
+|   |   |   |   |   kills <= 5: no (11.0)
+|   |   |   |   |   kills > 5
+|   |   |   |   |   |   gamelength <= 29: yes (6.0)
+|   |   |   |   |   |   gamelength > 29
+|   |   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   |   barons <= 0: no (20.0/5.0)
+|   |   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   |   towers <= 5: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   towers > 5
+|   |   |   |   |   |   |   |   |   |   gamelength <= 35
+|   |   |   |   |   |   |   |   |   |   |   gold <= 53099: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   gold > 53099: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   gamelength > 35: yes (2.0/1.0)
+|   |   |   |   |   |   |   inhibitors > 1: no (2.0)
+|   |   |   |   kills > 19: yes (8.0)
+|   |   |   gamelength > 36
+|   |   |   |   barons <= 0: no (78.0/3.0)
+|   |   |   |   barons > 0
+|   |   |   |   |   gamelength <= 46
+|   |   |   |   |   |   dragons <= 0: no (6.0)
+|   |   |   |   |   |   dragons > 0
+|   |   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   |   barons <= 1: no (38.0/9.0)
+|   |   |   |   |   |   |   |   barons > 1
+|   |   |   |   |   |   |   |   |   gamelength <= 42: yes (4.0)
+|   |   |   |   |   |   |   |   |   gamelength > 42: no (3.0)
+|   |   |   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   gold <= 70336: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   gold > 70336: no (2.0)
+|   |   |   |   |   |   |   |   dragons > 2: yes (2.0)
+|   |   |   |   |   gamelength > 46
+|   |   |   |   |   |   towers <= 5: no (14.0)
+|   |   |   |   |   |   towers > 5
+|   |   |   |   |   |   |   barons <= 1: no (23.0/1.0)
+|   |   |   |   |   |   |   barons > 1
+|   |   |   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   |   |   gamelength <= 57: no (7.0)
+|   |   |   |   |   |   |   |   |   gamelength > 57
+|   |   |   |   |   |   |   |   |   |   kills <= 17: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   kills > 17: no (2.0)
+|   |   |   |   |   |   |   |   inhibitors > 1: no (3.0)
+|   |   heralds > 0: no (72.0/3.0)
+towers > 6
+|   inhibitors <= 0
+|   |   gamelength <= 36
+|   |   |   dragons <= 2: no (10.0)
+|   |   |   dragons > 2: yes (3.0/1.0)
+|   |   gamelength > 36: no (94.0)
+|   inhibitors > 0
+|   |   gamelength <= 41
+|   |   |   towers <= 8
+|   |   |   |   kills <= 9
+|   |   |   |   |   gamelength <= 34
+|   |   |   |   |   |   dragons <= 1
+|   |   |   |   |   |   |   dragons <= 0: yes (3.0)
+|   |   |   |   |   |   |   dragons > 0
+|   |   |   |   |   |   |   |   towers <= 7: no (3.0/1.0)
+|   |   |   |   |   |   |   |   towers > 7: yes (9.0/1.0)
+|   |   |   |   |   |   dragons > 1: yes (36.0)
+|   |   |   |   |   gamelength > 34
+|   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   barons <= 0
+|   |   |   |   |   |   |   |   gamelength <= 36: no (4.0)
+|   |   |   |   |   |   |   |   gamelength > 36
+|   |   |   |   |   |   |   |   |   towers <= 7
+|   |   |   |   |   |   |   |   |   |   dragons <= 1
+|   |   |   |   |   |   |   |   |   |   |   gold <= 64028: no (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   gold > 64028: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 1: no (5.0/1.0)
+|   |   |   |   |   |   |   |   |   towers > 7: yes (5.0/1.0)
+|   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   heralds <= 0: yes (10.0/1.0)
+|   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   heralds <= 1
+|   |   |   |   |   |   |   |   |   |   gamelength <= 38: yes (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   gamelength > 38: no (4.0)
+|   |   |   |   |   |   |   |   |   heralds > 1: yes (2.0)
+|   |   |   |   |   |   inhibitors > 1: no (7.0)
+|   |   |   |   kills > 9
+|   |   |   |   |   gamelength <= 37
+|   |   |   |   |   |   towers <= 7
+|   |   |   |   |   |   |   gamelength <= 33: yes (135.0)
+|   |   |   |   |   |   |   gamelength > 33
+|   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   dragons <= 1
+|   |   |   |   |   |   |   |   |   |   |   barons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   kills <= 18: yes (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   kills > 18: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 36: yes (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength > 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   gold <= 62495: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   gold > 62495: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 1: yes (13.0)
+|   |   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   |   dragons <= 1: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 1
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 35
+|   |   |   |   |   |   |   |   |   |   |   |   gold <= 60040: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gold > 60040: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 35: yes (4.0)
+|   |   |   |   |   |   |   |   dragons > 2: yes (30.0)
+|   |   |   |   |   |   towers > 7: yes (478.0/1.0)
+|   |   |   |   |   gamelength > 37
+|   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   towers <= 7
+|   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   barons <= 0
+|   |   |   |   |   |   |   |   |   |   gold <= 65018: no (3.0)
+|   |   |   |   |   |   |   |   |   |   gold > 65018
+|   |   |   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   dragons <= 0: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dragons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons <= 1: yes (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 39: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 39: no (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   heralds > 0: yes (5.0/1.0)
+|   |   |   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   |   |   gold <= 68461: yes (14.0)
+|   |   |   |   |   |   |   |   |   |   gold > 68461
+|   |   |   |   |   |   |   |   |   |   |   barons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   dragons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 16: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills > 16: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dragons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   gold <= 71813: yes (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   gold > 71813: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   barons > 1: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   dragons > 2: yes (35.0/1.0)
+|   |   |   |   |   |   |   towers > 7
+|   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   dragons <= 1: yes (30.0/4.0)
+|   |   |   |   |   |   |   |   |   dragons > 1
+|   |   |   |   |   |   |   |   |   |   barons <= 0
+|   |   |   |   |   |   |   |   |   |   |   dragons <= 2: yes (11.0)
+|   |   |   |   |   |   |   |   |   |   |   dragons > 2
+|   |   |   |   |   |   |   |   |   |   |   |   dragons <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 18: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills > 18: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dragons > 3: yes (6.0)
+|   |   |   |   |   |   |   |   |   |   barons > 0: yes (64.0)
+|   |   |   |   |   |   |   |   heralds > 0: yes (22.0)
+|   |   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   |   kills <= 19
+|   |   |   |   |   |   |   |   gamelength <= 38: yes (7.0/1.0)
+|   |   |   |   |   |   |   |   gamelength > 38
+|   |   |   |   |   |   |   |   |   gamelength <= 40
+|   |   |   |   |   |   |   |   |   |   towers <= 7
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 39: no (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 39: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   towers > 7: no (8.0/1.0)
+|   |   |   |   |   |   |   |   |   gamelength > 40
+|   |   |   |   |   |   |   |   |   |   dragons <= 1: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 1: no (3.0/1.0)
+|   |   |   |   |   |   |   kills > 19: yes (14.0)
+|   |   |   towers > 8
+|   |   |   |   towers <= 9
+|   |   |   |   |   inhibitors <= 2
+|   |   |   |   |   |   dragons <= 0: yes (42.0/2.0)
+|   |   |   |   |   |   dragons > 0
+|   |   |   |   |   |   |   inhibitors <= 1: yes (1000.0/1.0)
+|   |   |   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   |   |   kills <= 10
+|   |   |   |   |   |   |   |   |   heralds <= 0: yes (13.0/1.0)
+|   |   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   |   kills <= 9: yes (5.0)
+|   |   |   |   |   |   |   |   |   |   kills > 9
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 35: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 35: no (2.0)
+|   |   |   |   |   |   |   |   kills > 10: yes (310.0/2.0)
+|   |   |   |   |   inhibitors > 2: yes (30.0/3.0)
+|   |   |   |   towers > 9: yes (3298.0/2.0)
+|   |   gamelength > 41
+|   |   |   towers <= 8
+|   |   |   |   gamelength <= 45
+|   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   towers <= 7
+|   |   |   |   |   |   |   dragons <= 3
+|   |   |   |   |   |   |   |   gamelength <= 44
+|   |   |   |   |   |   |   |   |   heralds <= 0: yes (53.0/16.0)
+|   |   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   |   gold <= 73641: no (4.0)
+|   |   |   |   |   |   |   |   |   |   gold > 73641
+|   |   |   |   |   |   |   |   |   |   |   gold <= 75572: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   gold > 75572: no (3.0/1.0)
+|   |   |   |   |   |   |   |   gamelength > 44: no (6.0)
+|   |   |   |   |   |   |   dragons > 3
+|   |   |   |   |   |   |   |   dragons <= 4
+|   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   gamelength <= 42: yes (7.0)
+|   |   |   |   |   |   |   |   |   |   gamelength > 42
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 44
+|   |   |   |   |   |   |   |   |   |   |   |   barons <= 0: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   barons > 0: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 44: yes (3.0)
+|   |   |   |   |   |   |   |   |   heralds > 0: yes (3.0)
+|   |   |   |   |   |   |   |   dragons > 4: yes (3.0)
+|   |   |   |   |   |   towers > 7
+|   |   |   |   |   |   |   heralds <= 0: yes (88.0/4.0)
+|   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   heralds <= 1
+|   |   |   |   |   |   |   |   |   gamelength <= 44
+|   |   |   |   |   |   |   |   |   |   gamelength <= 43
+|   |   |   |   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   kills <= 15: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   kills > 15: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   dragons > 2: yes (4.0)
+|   |   |   |   |   |   |   |   |   |   gamelength > 43: yes (7.0)
+|   |   |   |   |   |   |   |   |   gamelength > 44
+|   |   |   |   |   |   |   |   |   |   barons <= 1: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   barons > 1: no (3.0/1.0)
+|   |   |   |   |   |   |   |   heralds > 1: yes (2.0)
+|   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   gold <= 78706
+|   |   |   |   |   |   |   barons <= 1
+|   |   |   |   |   |   |   |   inhibitors <= 2
+|   |   |   |   |   |   |   |   |   kills <= 20
+|   |   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   |   dragons <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   kills <= 10: no (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   kills > 10
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons <= 1: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   towers <= 7: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   towers > 7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dragons <= 2: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dragons > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 44: no (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 44: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dragons > 3: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   heralds > 0: yes (4.0/1.0)
+|   |   |   |   |   |   |   |   |   kills > 20: yes (7.0)
+|   |   |   |   |   |   |   |   inhibitors > 2: yes (2.0)
+|   |   |   |   |   |   |   barons > 1: yes (4.0)
+|   |   |   |   |   |   gold > 78706: no (11.0)
+|   |   |   |   gamelength > 45
+|   |   |   |   |   towers <= 7
+|   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   barons <= 1
+|   |   |   |   |   |   |   |   gamelength <= 56
+|   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   barons <= 0
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 50
+|   |   |   |   |   |   |   |   |   |   |   |   dragons <= 2: no (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dragons > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 47: no (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 47
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 12: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   kills > 12: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 50
+|   |   |   |   |   |   |   |   |   |   |   |   kills <= 18: yes (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   kills > 18
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 25: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills > 25: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   |   |   |   gold <= 81961: yes (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   gold > 81961: no (14.0/3.0)
+|   |   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   |   heralds <= 1
+|   |   |   |   |   |   |   |   |   |   |   dragons <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   barons <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 10: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills > 10: no (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 51: yes (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 51: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dragons > 3: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   heralds > 1: no (3.0/1.0)
+|   |   |   |   |   |   |   |   gamelength > 56: no (13.0/1.0)
+|   |   |   |   |   |   |   barons > 1: no (41.0/10.0)
+|   |   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   |   barons <= 0
+|   |   |   |   |   |   |   |   dragons <= 0: yes (2.0)
+|   |   |   |   |   |   |   |   dragons > 0
+|   |   |   |   |   |   |   |   |   gamelength <= 54: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   gamelength > 54: no (2.0)
+|   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   gamelength <= 62
+|   |   |   |   |   |   |   |   |   dragons <= 4
+|   |   |   |   |   |   |   |   |   |   barons <= 1: no (15.0)
+|   |   |   |   |   |   |   |   |   |   barons > 1
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 50
+|   |   |   |   |   |   |   |   |   |   |   |   dragons <= 2: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dragons > 2: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 50: no (10.0)
+|   |   |   |   |   |   |   |   |   dragons > 4: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   gamelength > 62: yes (4.0/1.0)
+|   |   |   |   |   towers > 7
+|   |   |   |   |   |   inhibitors <= 2
+|   |   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   barons <= 0: yes (25.0/4.0)
+|   |   |   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   |   |   kills <= 12: no (6.0)
+|   |   |   |   |   |   |   |   |   |   |   kills > 12: yes (31.0/12.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 2
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 64
+|   |   |   |   |   |   |   |   |   |   |   |   barons <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   barons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dragons <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dragons <= 3: yes (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   dragons > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 52: yes (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 52: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   dragons > 4: yes (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   barons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 53
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 48: yes (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 48
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 49: yes (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 49
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gold <= 89415: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   gold > 89415: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 53: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   barons > 2: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 64: no (3.0)
+|   |   |   |   |   |   |   |   heralds > 0: yes (32.0/14.0)
+|   |   |   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   |   |   kills <= 14: no (14.0/2.0)
+|   |   |   |   |   |   |   |   kills > 14
+|   |   |   |   |   |   |   |   |   gold <= 97532
+|   |   |   |   |   |   |   |   |   |   dragons <= 3
+|   |   |   |   |   |   |   |   |   |   |   dragons <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 48: yes (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength > 48
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 51: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 51: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dragons > 1: no (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 3: yes (9.0)
+|   |   |   |   |   |   |   |   |   gold > 97532
+|   |   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 60: no (4.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 60: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   heralds > 0: no (2.0)
+|   |   |   |   |   |   inhibitors > 2
+|   |   |   |   |   |   |   inhibitors <= 3
+|   |   |   |   |   |   |   |   kills <= 13: no (9.0)
+|   |   |   |   |   |   |   |   kills > 13
+|   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   gamelength <= 59
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 54: no (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 54: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   gamelength > 59: no (3.0)
+|   |   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   |   kills <= 18: no (3.0)
+|   |   |   |   |   |   |   |   |   |   kills > 18: yes (3.0/1.0)
+|   |   |   |   |   |   |   inhibitors > 3: no (2.0)
+|   |   |   towers > 8
+|   |   |   |   gamelength <= 48
+|   |   |   |   |   towers <= 10
+|   |   |   |   |   |   kills <= 11
+|   |   |   |   |   |   |   kills <= 7: no (5.0/1.0)
+|   |   |   |   |   |   |   kills > 7
+|   |   |   |   |   |   |   |   dragons <= 3
+|   |   |   |   |   |   |   |   |   towers <= 9
+|   |   |   |   |   |   |   |   |   |   heralds <= 0: yes (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   |   |   gold <= 77275: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   gold > 77275: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   towers > 9
+|   |   |   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   |   |   inhibitors <= 2: yes (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   inhibitors > 2: no (2.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 2: yes (6.0)
+|   |   |   |   |   |   |   |   dragons > 3: yes (27.0/1.0)
+|   |   |   |   |   |   kills > 11
+|   |   |   |   |   |   |   inhibitors <= 2
+|   |   |   |   |   |   |   |   heralds <= 0: yes (338.0/7.0)
+|   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   barons <= 1
+|   |   |   |   |   |   |   |   |   |   inhibitors <= 1: yes (20.0/1.0)
+|   |   |   |   |   |   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   |   |   |   |   |   heralds <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   barons <= 0: yes (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   barons > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 46: yes (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 46: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons > 3: yes (15.0)
+|   |   |   |   |   |   |   |   |   |   |   heralds > 1: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   barons > 1: yes (50.0/1.0)
+|   |   |   |   |   |   |   inhibitors > 2
+|   |   |   |   |   |   |   |   towers <= 9
+|   |   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   |   dragons <= 0: no (3.0)
+|   |   |   |   |   |   |   |   |   |   dragons > 0
+|   |   |   |   |   |   |   |   |   |   |   barons <= 1: no (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   barons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   gold <= 81571: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gold > 81571: yes (2.0)
+|   |   |   |   |   |   |   |   |   dragons > 2: yes (17.0/2.0)
+|   |   |   |   |   |   |   |   towers > 9
+|   |   |   |   |   |   |   |   |   barons <= 2
+|   |   |   |   |   |   |   |   |   |   barons <= 1
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 44
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 42: yes (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength > 42
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 21
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 43
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 19: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   kills > 19: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 43: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills > 21: yes (7.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 44: yes (30.0)
+|   |   |   |   |   |   |   |   |   |   barons > 1: yes (43.0)
+|   |   |   |   |   |   |   |   |   barons > 2
+|   |   |   |   |   |   |   |   |   |   gold <= 84403: yes (5.0)
+|   |   |   |   |   |   |   |   |   |   gold > 84403: no (3.0/1.0)
+|   |   |   |   |   towers > 10: yes (396.0/2.0)
+|   |   |   |   gamelength > 48
+|   |   |   |   |   towers <= 9
+|   |   |   |   |   |   inhibitors <= 2
+|   |   |   |   |   |   |   inhibitors <= 1
+|   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   gamelength <= 63: yes (64.0/3.0)
+|   |   |   |   |   |   |   |   |   gamelength > 63
+|   |   |   |   |   |   |   |   |   |   kills <= 21: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   kills > 21: no (2.0)
+|   |   |   |   |   |   |   |   heralds > 0: yes (14.0/1.0)
+|   |   |   |   |   |   |   inhibitors > 1
+|   |   |   |   |   |   |   |   barons <= 2: yes (52.0/12.0)
+|   |   |   |   |   |   |   |   barons > 2: no (3.0/1.0)
+|   |   |   |   |   |   inhibitors > 2
+|   |   |   |   |   |   |   inhibitors <= 3
+|   |   |   |   |   |   |   |   heralds <= 0: yes (21.0/10.0)
+|   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   kills <= 14: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   kills > 14: no (2.0)
+|   |   |   |   |   |   |   inhibitors > 3
+|   |   |   |   |   |   |   |   kills <= 31: no (20.0/1.0)
+|   |   |   |   |   |   |   |   kills > 31: yes (2.0)
+|   |   |   |   |   towers > 9
+|   |   |   |   |   |   gamelength <= 67
+|   |   |   |   |   |   |   towers <= 10
+|   |   |   |   |   |   |   |   inhibitors <= 4
+|   |   |   |   |   |   |   |   |   kills <= 13
+|   |   |   |   |   |   |   |   |   |   inhibitors <= 3
+|   |   |   |   |   |   |   |   |   |   |   dragons <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons <= 1: no (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   dragons > 1: yes (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   heralds > 0: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   |   dragons > 2
+|   |   |   |   |   |   |   |   |   |   |   |   heralds <= 0: yes (16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   inhibitors <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 11: no (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   kills > 11: yes (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   inhibitors > 2: yes (3.0)
+|   |   |   |   |   |   |   |   |   |   inhibitors > 3
+|   |   |   |   |   |   |   |   |   |   |   barons <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills <= 12: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   kills > 12: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   heralds > 0: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   barons > 2: yes (2.0)
+|   |   |   |   |   |   |   |   |   kills > 13
+|   |   |   |   |   |   |   |   |   |   kills <= 22: yes (93.0/1.0)
+|   |   |   |   |   |   |   |   |   |   kills > 22
+|   |   |   |   |   |   |   |   |   |   |   gamelength <= 52: yes (14.0)
+|   |   |   |   |   |   |   |   |   |   |   gamelength > 52
+|   |   |   |   |   |   |   |   |   |   |   |   dragons <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 55
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   barons <= 1: no (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   barons > 1: yes (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 55: yes (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   dragons > 4: yes (7.0)
+|   |   |   |   |   |   |   |   inhibitors > 4
+|   |   |   |   |   |   |   |   |   barons <= 2
+|   |   |   |   |   |   |   |   |   |   barons <= 1: no (5.0)
+|   |   |   |   |   |   |   |   |   |   barons > 1
+|   |   |   |   |   |   |   |   |   |   |   kills <= 17: no (4.0)
+|   |   |   |   |   |   |   |   |   |   |   kills > 17: yes (5.0/1.0)
+|   |   |   |   |   |   |   |   |   barons > 2: yes (5.0)
+|   |   |   |   |   |   |   towers > 10
+|   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   kills <= 19
+|   |   |   |   |   |   |   |   |   |   inhibitors <= 5: yes (87.0/5.0)
+|   |   |   |   |   |   |   |   |   |   inhibitors > 5
+|   |   |   |   |   |   |   |   |   |   |   dragons <= 1: no (2.0)
+|   |   |   |   |   |   |   |   |   |   |   dragons > 1
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 56: yes (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   gamelength > 56
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 60
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength <= 57: yes (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 57: no (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   gamelength > 60: yes (4.0)
+|   |   |   |   |   |   |   |   |   kills > 19: yes (60.0)
+|   |   |   |   |   |   |   |   heralds > 0: yes (45.0)
+|   |   |   |   |   |   gamelength > 67
+|   |   |   |   |   |   |   inhibitors <= 3: yes (6.0)
+|   |   |   |   |   |   |   inhibitors > 3
+|   |   |   |   |   |   |   |   heralds <= 0
+|   |   |   |   |   |   |   |   |   barons <= 2
+|   |   |   |   |   |   |   |   |   |   gold <= 121008: no (3.0)
+|   |   |   |   |   |   |   |   |   |   gold > 121008: yes (2.0)
+|   |   |   |   |   |   |   |   |   barons > 2: yes (6.0/1.0)
+|   |   |   |   |   |   |   |   heralds > 0
+|   |   |   |   |   |   |   |   |   dragons <= 4: yes (4.0)
+|   |   |   |   |   |   |   |   |   dragons > 4: no (7.0/1.0)
+
+Number of Leaves  : 	266
+
+Size of the tree : 	531
+
+
+Time taken to build model: 0.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       14710               96.5223 %
+Incorrectly Classified Instances       530                3.4777 %
+Kappa statistic                          0.9304
+Mean absolute error                      0.0405
+Root mean squared error                  0.1727
+Relative absolute error                  8.1074 %
+Root relative squared error             34.5352 %
+Total Number of Instances            15240     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.971    0.040    0.960      0.971    0.965      0.931    0.975     0.960     yes
+                 0.960    0.029    0.970      0.960    0.965      0.931    0.975     0.965     no
+Weighted Avg.    0.965    0.035    0.965      0.965    0.965      0.931    0.975     0.962     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7396  224 |    a = yes
+  306 7314 |    b = no
+

@@ -42,16 +42,16 @@ kills
   precision         1.5435     1.5435
 
 inhibitors
-  mean              9.6222     3.0626
-  std. dev.          1.252     2.1474
-  weight sum          7620       7620
-  precision              1          1
-
-towers
   mean              2.2995     0.1923
   std. dev.         1.1257     0.7048
   weight sum          7620       7620
   precision         1.1667     1.1667
+
+towers
+  mean              9.6222     3.0626
+  std. dev.          1.252     2.1474
+  weight sum          7620       7620
+  precision              1          1
 
 dragons
   mean              2.6625     1.1151
@@ -73,7 +73,7 @@ heralds
 
 
 
-Time taken to build model: 0.04 seconds
+Time taken to build model: 0.06 seconds
 
 === Stratified cross-validation ===
 === Summary ===

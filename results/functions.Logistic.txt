@@ -25,8 +25,8 @@ Variable          yes
 gamelength    -0.2721
 gold           0.0001
 kills          0.0983
-inhibitors      1.663
-towers        -0.3897
+inhibitors    -0.3897
+towers          1.663
 dragons        0.3251
 barons         0.0845
 heralds       -0.4421
@@ -40,14 +40,14 @@ Variable          yes
 gamelength     0.7618
 gold           1.0001
 kills          1.1033
-inhibitors     5.2751
-towers         0.6772
+inhibitors     0.6772
+towers         5.2751
 dragons        1.3841
 barons         1.0882
 heralds        0.6427
 
 
-Time taken to build model: 0.31 seconds
+Time taken to build model: 0.23 seconds
 
 === Stratified cross-validation ===
 === Summary ===

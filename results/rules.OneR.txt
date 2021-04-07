@@ -17,13 +17,13 @@ Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
 
-inhibitors:
+towers:
 	< 6.5	-> no
 	>= 6.5	-> yes
 (14571/15240 instances correct)
 
 
-Time taken to build model: 0.04 seconds
+Time taken to build model: 0.06 seconds
 
 === Stratified cross-validation ===
 === Summary ===
